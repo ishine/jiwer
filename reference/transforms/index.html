@@ -975,6 +975,7 @@
 
 
 
+
 <h2 id="transforms" class="doc doc-heading">
           <span class="doc doc-object-name doc-module-name">transforms</span>
 
@@ -1011,24 +1012,24 @@ composition of multiple transformations must therefore also always end with
 
 
 
+
 <h3 id="transforms.AbstractTransform" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">AbstractTransform</span>
+          <span class="doc doc-object-name doc-class-name">AbstractTransform</span>
 
 
 <a href="#transforms.AbstractTransform" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>object</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>object</code></p>
 
   
       <p>The base class of a Transform.</p>
 
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
 <span class="normal">69</span>
@@ -1092,7 +1093,7 @@ composition of multiple transformations must therefore also always end with
     <span class="k">def</span> <span class="nf">process_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">process_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -1106,21 +1107,25 @@ composition of multiple transformations must therefore also always end with
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.AbstractTransform.__call__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__call__</span>
+          <span class="doc doc-object-name doc-function-name">__call__</span>
 
 
 <a href="#transforms.AbstractTransform.__call__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__call__</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__call__</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
       <p>Transforms one or more strings.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1150,6 +1155,8 @@ composition of multiple transformations must therefore also always end with
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1172,9 +1179,9 @@ composition of multiple transformations must therefore also always end with
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
 <span class="normal">72</span>
 <span class="normal">73</span>
 <span class="normal">74</span>
@@ -1216,7 +1223,7 @@ composition of multiple transformations must therefore also always end with
             <span class="p">)</span>
         <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -1233,16 +1240,17 @@ composition of multiple transformations must therefore also always end with
 
 
 
+
 <h3 id="transforms.Compose" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">Compose</span>
+          <span class="doc doc-object-name doc-class-name">Compose</span>
 
 
 <a href="#transforms.Compose" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>object</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>object</code></p>
 
   
       <p>Chain multiple transformations back-to-back to create a pipeline combining multiple
@@ -1261,10 +1269,9 @@ or character error rate is desired.</p>
 <span class="p">])</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">100</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
 <span class="normal">103</span>
@@ -1330,7 +1337,7 @@ or character error rate is desired.</p>
 
         <span class="k">return</span> <span class="n">text</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -1344,20 +1351,24 @@ or character error rate is desired.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.Compose.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.Compose.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">transforms</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">transforms</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1387,9 +1398,9 @@ or character error rate is desired.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">120</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">120</span>
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
@@ -1403,7 +1414,7 @@ or character error rate is desired.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">transforms</span> <span class="o">=</span> <span class="n">transforms</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -1420,16 +1431,17 @@ or character error rate is desired.</p>
 
 
 
+
 <h3 id="transforms.ExpandCommonEnglishContractions" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ExpandCommonEnglishContractions</span>
+          <span class="doc doc-object-name doc-class-name">ExpandCommonEnglishContractions</span>
 
 
 <a href="#transforms.ExpandCommonEnglishContractions" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Replace common contractions such as <code>let's</code> to <code>let us</code>.</p>
@@ -1500,10 +1512,9 @@ or character error rate is desired.</p>
 <span class="c1"># prints: [&quot;she will make sure you can not make it&quot;, &quot;let us party!&quot;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">507</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">507</span>
 <span class="normal">508</span>
 <span class="normal">509</span>
 <span class="normal">510</span>
@@ -1607,7 +1618,7 @@ or character error rate is desired.</p>
 
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -1633,16 +1644,17 @@ or character error rate is desired.</p>
 
 
 
+
 <h3 id="transforms.ReduceToListOfListOfChars" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ReduceToListOfListOfChars</span>
+          <span class="doc doc-object-name doc-class-name">ReduceToListOfListOfChars</span>
 
 
 <a href="#transforms.ReduceToListOfListOfChars" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Transforms a single input sentence, or a list of input sentences, into
@@ -1661,10 +1673,9 @@ single sentence.</p>
 <span class="c1"># prints: [[&#39;h&#39;, &#39;i&#39;], [&#39;t&#39;, &#39;h&#39;, &#39;i&#39;, &#39;s&#39;, &#39; &#39;, &#39;i&#39;, &#39;s&#39;, &#39; &#39;, &#39;a&#39;, &#39;n&#39;, &#39; &#39;, &#39;e&#39;, &#39;x&#39;, &#39;a&#39;, &#39;m&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">195</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
 <span class="normal">198</span>
@@ -1734,7 +1745,7 @@ single sentence.</p>
 
         <span class="k">return</span> <span class="n">sentence_collection</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -1760,16 +1771,17 @@ single sentence.</p>
 
 
 
+
 <h3 id="transforms.ReduceToListOfListOfWords" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ReduceToListOfListOfWords</span>
+          <span class="doc doc-object-name doc-class-name">ReduceToListOfListOfWords</span>
 
 
 <a href="#transforms.ReduceToListOfListOfWords" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Transforms a single input sentence, or a list of input sentences, into
@@ -1789,10 +1801,9 @@ Empty strings (no output) are removed for the list.</p>
 <span class="c1"># prints: [[&#39;hi&#39;], [&#39;this&#39;, &#39;is&#39;, &#39;an, &#39;example&#39;]]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">150</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">150</span>
 <span class="normal">151</span>
 <span class="normal">152</span>
 <span class="normal">153</span>
@@ -1878,7 +1889,7 @@ Empty strings (no output) are removed for the list.</p>
 
         <span class="k">return</span> <span class="n">sentence_collection</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -1892,20 +1903,24 @@ Empty strings (no output) are removed for the list.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.ReduceToListOfListOfWords.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.ReduceToListOfListOfWords.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">word_delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">word_delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1935,9 +1950,9 @@ Empty strings (no output) are removed for the list.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">171</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">171</span>
 <span class="normal">172</span>
 <span class="normal">173</span>
 <span class="normal">174</span>
@@ -1949,7 +1964,7 @@ Empty strings (no output) are removed for the list.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">word_delimiter</span> <span class="o">=</span> <span class="n">word_delimiter</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -1966,16 +1981,17 @@ Empty strings (no output) are removed for the list.</p>
 
 
 
+
 <h3 id="transforms.ReduceToSingleSentence" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ReduceToSingleSentence</span>
+          <span class="doc doc-object-name doc-class-name">ReduceToSingleSentence</span>
 
 
 <a href="#transforms.ReduceToSingleSentence" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Transforms multiple sentences into a single sentence.
@@ -1994,10 +2010,9 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 <span class="c1"># prints: [&#39;hi this is an example&#39;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>
 <span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
@@ -2067,7 +2082,7 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word_delimiter</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered_inp</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2081,25 +2096,27 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.ReduceToSingleSentence.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.ReduceToSingleSentence.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">word_delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">word_delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
       <p>:param word_delimiter: the character which delimits words. Default is <code></code> (space).</p>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">251</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">251</span>
 <span class="normal">252</span>
 <span class="normal">253</span>
 <span class="normal">254</span>
@@ -2109,7 +2126,7 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">word_delimiter</span> <span class="o">=</span> <span class="n">word_delimiter</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -2126,16 +2143,17 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 
 
 
+
 <h3 id="transforms.RemoveEmptyStrings" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemoveEmptyStrings</span>
+          <span class="doc doc-object-name doc-class-name">RemoveEmptyStrings</span>
 
 
 <a href="#transforms.RemoveEmptyStrings" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Remove empty strings from a list of strings.</p>
@@ -2150,10 +2168,9 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 <span class="c1"># prints: [&#39;this is an example&#39;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">485</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">485</span>
 <span class="normal">486</span>
 <span class="normal">487</span>
 <span class="normal">488</span>
@@ -2193,7 +2210,7 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
     <span class="k">def</span> <span class="nf">process_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">inp</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2219,16 +2236,17 @@ Note that this creates an invariance: <code>wer([a, b], [a, b])</code> might not
 
 
 
+
 <h3 id="transforms.RemoveKaldiNonWords" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemoveKaldiNonWords</span>
+          <span class="doc doc-object-name doc-class-name">RemoveKaldiNonWords</span>
 
 
 <a href="#transforms.RemoveKaldiNonWords" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Remove any word between <code>[]</code> and <code>&lt;&gt;</code>. This can be useful when working
@@ -2247,10 +2265,9 @@ with hypotheses from the Kaldi project, which can output non-words such as
 <span class="c1"># note the extra spaces</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">600</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">600</span>
 <span class="normal">601</span>
 <span class="normal">602</span>
 <span class="normal">603</span>
@@ -2292,7 +2309,7 @@ with hypotheses from the Kaldi project, which can output non-words such as
     <span class="k">def</span> <span class="nf">process_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[&lt;\[][^&gt;\]]*[&gt;\]]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2318,16 +2335,17 @@ with hypotheses from the Kaldi project, which can output non-words such as
 
 
 
+
 <h3 id="transforms.RemoveMultipleSpaces" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemoveMultipleSpaces</span>
+          <span class="doc doc-object-name doc-class-name">RemoveMultipleSpaces</span>
 
 
 <a href="#transforms.RemoveMultipleSpaces" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Filter out multiple spaces between words.</p>
@@ -2343,10 +2361,9 @@ with hypotheses from the Kaldi project, which can output non-words such as
 <span class="c1"># note that there are still trailing spaces</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">441</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">441</span>
 <span class="normal">442</span>
 <span class="normal">443</span>
 <span class="normal">444</span>
@@ -2390,7 +2407,7 @@ with hypotheses from the Kaldi project, which can output non-words such as
     <span class="k">def</span> <span class="nf">process_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">process_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2416,37 +2433,35 @@ with hypotheses from the Kaldi project, which can output non-words such as
 
 
 
+
 <h3 id="transforms.RemovePunctuation" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemovePunctuation</span>
+          <span class="doc doc-object-name doc-class-name">RemovePunctuation</span>
 
 
 <a href="#transforms.RemovePunctuation" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="transforms.BaseRemoveTransform">BaseRemoveTransform</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="transforms.BaseRemoveTransform">BaseRemoveTransform</span></code></p>
 
   
       <p>This transform filters out punctuation. The punctuation characters are defined as
 all unicode characters whose category name starts with <code>P</code>.
 See <a href="https://www.unicode.org/reports/tr44/#General_Category_Values">here</a> for more
-information.</p>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jiwer</span>
+information.
+Example:
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jiwer</span>
 
 <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;this is an example!&quot;</span><span class="p">,</span> <span class="s2">&quot;hello. goodbye&quot;</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">jiwer</span><span class="o">.</span><span class="n">RemovePunctuation</span><span class="p">()(</span><span class="n">sentences</span><span class="p">))</span>
 <span class="c1"># prints: [&#39;this is an example&#39;, &quot;hello goodbye&quot;]</span>
-</code></pre></div>
-</details>
+</code></pre></div></p>
 
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">419</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">419</span>
 <span class="normal">420</span>
 <span class="normal">421</span>
 <span class="normal">422</span>
@@ -2486,7 +2501,7 @@ information.</p>
         <span class="n">punctuation_characters</span> <span class="o">=</span> <span class="n">_get_punctuation_characters</span><span class="p">()</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">punctuation_characters</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2512,16 +2527,17 @@ information.</p>
 
 
 
+
 <h3 id="transforms.RemoveSpecificWords" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemoveSpecificWords</span>
+          <span class="doc doc-object-name doc-class-name">RemoveSpecificWords</span>
 
 
 <a href="#transforms.RemoveSpecificWords" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.SubstituteWords" href="#transforms.SubstituteWords">SubstituteWords</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.SubstituteWords" href="#transforms.SubstituteWords">SubstituteWords</a></code></p>
 
   
       <p>Can be used to filter out certain words.
@@ -2540,10 +2556,9 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
 <span class="c1"># note the extra spaces</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
 <span class="normal">339</span>
 <span class="normal">340</span>
 <span class="normal">341</span>
@@ -2597,7 +2612,7 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2611,20 +2626,24 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.RemoveSpecificWords.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.RemoveSpecificWords.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">words_to_remove</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">words_to_remove</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2654,9 +2673,9 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">357</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">357</span>
 <span class="normal">358</span>
 <span class="normal">359</span>
 <span class="normal">360</span>
@@ -2672,7 +2691,7 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
 
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -2689,16 +2708,17 @@ in the composition <em>after</em> <code>RemoveSpecificWords</code>.</p>
 
 
 
+
 <h3 id="transforms.RemoveWhiteSpace" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">RemoveWhiteSpace</span>
+          <span class="doc doc-object-name doc-class-name">RemoveWhiteSpace</span>
 
 
 <a href="#transforms.RemoveWhiteSpace" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="transforms.BaseRemoveTransform">BaseRemoveTransform</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="transforms.BaseRemoveTransform">BaseRemoveTransform</span></code></p>
 
   
       <p>This transform filters out white space characters.
@@ -2724,10 +2744,9 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 <span class="c1"># note the trailing spaces</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">367</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">367</span>
 <span class="normal">368</span>
 <span class="normal">369</span>
 <span class="normal">370</span>
@@ -2807,7 +2826,7 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">characters</span><span class="p">,</span> <span class="n">replace_token</span><span class="o">=</span><span class="n">replace_token</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -2821,20 +2840,24 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.RemoveWhiteSpace.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.RemoveWhiteSpace.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">replace_by_space</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">replace_by_space</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2864,9 +2887,9 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">393</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">393</span>
 <span class="normal">394</span>
 <span class="normal">395</span>
 <span class="normal">396</span>
@@ -2894,7 +2917,7 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">characters</span><span class="p">,</span> <span class="n">replace_token</span><span class="o">=</span><span class="n">replace_token</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -2911,16 +2934,17 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 
 
 
+
 <h3 id="transforms.Strip" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">Strip</span>
+          <span class="doc doc-object-name doc-class-name">Strip</span>
 
 
 <a href="#transforms.Strip" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Removes all leading and trailing spaces.</p>
@@ -2936,10 +2960,9 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 <span class="c1"># note that there is an empty string left behind which might need to be cleaned up</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">465</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">465</span>
 <span class="normal">466</span>
 <span class="normal">467</span>
 <span class="normal">468</span>
@@ -2975,7 +2998,7 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
     <span class="k">def</span> <span class="nf">process_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -3001,16 +3024,17 @@ If so, make sure that <code>jiwer.RemoveMultipleSpaces</code>,
 
 
 
+
 <h3 id="transforms.SubstituteRegexes" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">SubstituteRegexes</span>
+          <span class="doc doc-object-name doc-class-name">SubstituteRegexes</span>
 
 
 <a href="#transforms.SubstituteRegexes" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Transform strings by substituting substrings matching regex expressions into
@@ -3029,10 +3053,9 @@ another substring.</p>
 <span class="c1"># prints: [&quot;is the world sacr or lov?&quot;, &quot;edibles are allegedly cultivat&quot;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">269</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">269</span>
 <span class="normal">270</span>
 <span class="normal">271</span>
 <span class="normal">272</span>
@@ -3096,7 +3119,7 @@ another substring.</p>
 
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -3110,20 +3133,24 @@ another substring.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.SubstituteRegexes.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.SubstituteRegexes.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">substitutions</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">substitutions</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3153,9 +3180,9 @@ another substring.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">288</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">288</span>
 <span class="normal">289</span>
 <span class="normal">290</span>
 <span class="normal">291</span>
@@ -3169,7 +3196,7 @@ another substring.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">substitutions</span> <span class="o">=</span> <span class="n">substitutions</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -3186,16 +3213,17 @@ another substring.</p>
 
 
 
+
 <h3 id="transforms.SubstituteWords" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">SubstituteWords</span>
+          <span class="doc doc-object-name doc-class-name">SubstituteWords</span>
 
 
 <a href="#transforms.SubstituteWords" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>This transform can be used to replace a word into another word.
@@ -3215,10 +3243,9 @@ be substituted into <code>barbar</code>.</p>
 <span class="c1"># prints: [&quot;i am awesome&quot;, &quot;your book&quot;, &quot;foobar&quot;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">303</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">303</span>
 <span class="normal">304</span>
 <span class="normal">305</span>
 <span class="normal">306</span>
@@ -3284,7 +3311,7 @@ be substituted into <code>barbar</code>.</p>
 
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -3298,20 +3325,24 @@ be substituted into <code>barbar</code>.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
+
 <h4 id="transforms.SubstituteWords.__init__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__init__</span>
+          <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 <a href="#transforms.SubstituteWords.__init__" class="headerlink" title="Permanent link">#</a></h4>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">substitutions</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">substitutions</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3341,9 +3372,9 @@ be substituted into <code>barbar</code>.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>jiwer/transforms.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">324</span>
+          <details class="quote">
+            <summary>Source code in <code>jiwer/transforms.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">324</span>
 <span class="normal">325</span>
 <span class="normal">326</span>
 <span class="normal">327</span>
@@ -3355,7 +3386,7 @@ be substituted into <code>barbar</code>.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">substitutions</span> <span class="o">=</span> <span class="n">substitutions</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -3372,35 +3403,33 @@ be substituted into <code>barbar</code>.</p>
 
 
 
+
 <h3 id="transforms.ToLowerCase" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ToLowerCase</span>
+          <span class="doc doc-object-name doc-class-name">ToLowerCase</span>
 
 
 <a href="#transforms.ToLowerCase" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
-      <p>Convert every character into lowercase.</p>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jiwer</span>
+      <p>Convert every character into lowercase.
+Example:
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jiwer</span>
 
 <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;You&#39;re PRETTY&quot;</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">jiwer</span><span class="o">.</span><span class="n">ToLowerCase</span><span class="p">()(</span><span class="n">sentences</span><span class="p">))</span>
 
 <span class="c1"># prints: [&quot;you&#39;re pretty&quot;]</span>
-</code></pre></div>
-</details>
+</code></pre></div></p>
 
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">561</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">561</span>
 <span class="normal">562</span>
 <span class="normal">563</span>
 <span class="normal">564</span>
@@ -3434,7 +3463,7 @@ be substituted into <code>barbar</code>.</p>
     <span class="k">def</span> <span class="nf">process_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -3460,16 +3489,17 @@ be substituted into <code>barbar</code>.</p>
 
 
 
+
 <h3 id="transforms.ToUpperCase" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ToUpperCase</span>
+          <span class="doc doc-object-name doc-class-name">ToUpperCase</span>
 
 
 <a href="#transforms.ToUpperCase" class="headerlink" title="Permanent link">#</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="transforms.AbstractTransform" href="#transforms.AbstractTransform">AbstractTransform</a></code></p>
 
   
       <p>Convert every character to uppercase.</p>
@@ -3485,10 +3515,9 @@ be substituted into <code>barbar</code>.</p>
 <span class="c1"># prints: [&quot;YOU&#39;RE AMAZING&quot;]</span>
 </code></pre></div>
 </details>
-
-        <details class="quote">
-          <summary>Source code in <code>jiwer/transforms.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">580</span>
+            <details class="quote">
+              <summary>Source code in <code>jiwer/transforms.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">580</span>
 <span class="normal">581</span>
 <span class="normal">582</span>
 <span class="normal">583</span>
@@ -3524,7 +3553,7 @@ be substituted into <code>barbar</code>.</p>
     <span class="k">def</span> <span class="nf">process_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 

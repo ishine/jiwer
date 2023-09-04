@@ -490,7 +490,7 @@
 <span class="n">mer</span> <span class="o">=</span> <span class="n">jiwer</span><span class="o">.</span><span class="n">mer</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">hypothesis</span><span class="p">)</span>
 <span class="n">wil</span> <span class="o">=</span> <span class="n">jiwer</span><span class="o">.</span><span class="n">wil</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">hypothesis</span><span class="p">)</span>
 
-<span class="c1"># faster, because `compute_measures` only needs to perform the heavy lifting once:</span>
+<span class="c1"># faster, because `process_words` only needs to perform the heavy lifting once:</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">jiwer</span><span class="o">.</span><span class="n">process_words</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">hypothesis</span><span class="p">)</span>
 <span class="n">wer</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">wer</span>
 <span class="n">mer</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">mer</span>
@@ -517,9 +517,8 @@
 <span class="n">error</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">cer</span>
 </code></pre></div>
 <h1 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link">#</a></h1>
-<p>With <code>jiwer.process_words</code>, you also get the alignment between the reference and hypothesis.</p>
-<p>We provide the alignment as a list of <code>(op, ref_start_idx, ref_idx_end, hyp_idx_start, hyp_idx_end)</code>, where <code>op</code> is one of
-    <code>equal</code>, <code>replace</code>, <code>delete</code>, or <code>insert</code>.</p>
+<p>With <code>jiwer.process_words</code> and <code>jiwer.process_characters</code>, you get the alignment between the reference and hypothesis.</p>
+<p>We provide the alignment as a list of <code>AlignmentChunk</code> objects with attributes <code>type, ref_start_idx, ref_end_idx, hyp_start_idx, hyp_end_idx</code>, where <code>type</code> is one of <code>equal</code>, <code>substitute</code>, <code>delete</code>, or <code>insert</code>.</p>
 <p>This looks like the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">jiwer</span>
 

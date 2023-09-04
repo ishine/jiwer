@@ -615,6 +615,7 @@
 
 
 
+
 <h2 id="transformations" class="doc doc-heading">
           <span class="doc doc-object-name doc-module-name">transformations</span>
 
@@ -642,8 +643,9 @@ useful in specific use cases.</p>
 
 
 
+
 <h3 id="transformations.cer_contiguous" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">cer_contiguous</span>
+          <span class="doc doc-object-name doc-attribute-name">cer_contiguous</span>
 
   
   <span class="doc doc-labels">
@@ -651,7 +653,7 @@ useful in specific use cases.</p>
   </span>
 
 <a href="#transformations.cer_contiguous" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">cer_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cer_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">Strip</span><span class="p">(),</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">ReduceToSingleSentence</span><span class="p">(),</span>
@@ -672,8 +674,9 @@ sentences differ.</p>
 
 
 
+
 <h3 id="transformations.cer_default" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">cer_default</span>
+          <span class="doc doc-object-name doc-attribute-name">cer_default</span>
 
   
   <span class="doc doc-labels">
@@ -681,7 +684,7 @@ sentences differ.</p>
   </span>
 
 <a href="#transformations.cer_default" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">cer_default</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cer_default</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span><span class="n">tr</span><span class="o">.</span><span class="n">Strip</span><span class="p">(),</span> <span class="n">tr</span><span class="o">.</span><span class="n">ReduceToListOfListOfChars</span><span class="p">()]</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -699,8 +702,9 @@ transformed into a list with lists of strings, where each string is a single cha
 
 
 
+
 <h3 id="transformations.wer_contiguous" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">wer_contiguous</span>
+          <span class="doc doc-object-name doc-attribute-name">wer_contiguous</span>
 
   
   <span class="doc doc-labels">
@@ -708,7 +712,7 @@ transformed into a list with lists of strings, where each string is a single cha
   </span>
 
 <a href="#transformations.wer_contiguous" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">wer_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">wer_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">RemoveMultipleSpaces</span><span class="p">(),</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">Strip</span><span class="p">(),</span>
@@ -730,8 +734,9 @@ sentences differ.</p>
 
 
 
+
 <h3 id="transformations.wer_default" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">wer_default</span>
+          <span class="doc doc-object-name doc-attribute-name">wer_default</span>
 
   
   <span class="doc doc-labels">
@@ -739,7 +744,7 @@ sentences differ.</p>
   </span>
 
 <a href="#transformations.wer_default" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">wer_default</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">wer_default</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">RemoveMultipleSpaces</span><span class="p">(),</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">Strip</span><span class="p">(),</span>
@@ -763,8 +768,9 @@ is a single word.</p>
 
 
 
+
 <h3 id="transformations.wer_standardize" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">wer_standardize</span>
+          <span class="doc doc-object-name doc-attribute-name">wer_standardize</span>
 
   
   <span class="doc doc-labels">
@@ -772,7 +778,7 @@ is a single word.</p>
   </span>
 
 <a href="#transformations.wer_standardize" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">wer_standardize</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">wer_standardize</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">ToLowerCase</span><span class="p">(),</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">ExpandCommonEnglishContractions</span><span class="p">(),</span>
@@ -798,8 +804,9 @@ are applied.</p>
 
 
 
+
 <h3 id="transformations.wer_standardize_contiguous" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">wer_standardize_contiguous</span>
+          <span class="doc doc-object-name doc-attribute-name">wer_standardize_contiguous</span>
 
   
   <span class="doc doc-labels">
@@ -807,7 +814,7 @@ are applied.</p>
   </span>
 
 <a href="#transformations.wer_standardize_contiguous" class="headerlink" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">wer_standardize_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">wer_standardize_contiguous</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">ToLowerCase</span><span class="p">(),</span>
         <span class="n">tr</span><span class="o">.</span><span class="n">ExpandCommonEnglishContractions</span><span class="p">(),</span>
